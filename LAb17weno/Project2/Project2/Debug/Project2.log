@@ -1,0 +1,4 @@
+﻿  Source.cpp
+d:\carrera\eda no final\lab17weno\project2\project2\singlylinkedlist.h(59): error C2061: syntax error: identifier 'Nodo'
+  d:\carrera\eda no final\lab17weno\project2\project2\singlylinkedlist.h(115): note: see reference to class template instantiation 'SinglyLinkedList<T>' being compiled
+d:\carrera\eda no final\lab17weno\project2\project2\source.cpp(41): error C2065: 'list': undeclared identifier
