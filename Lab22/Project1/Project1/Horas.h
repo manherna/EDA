@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
 class Horas
@@ -48,7 +48,7 @@ Horas::Horas(){
 Horas::~Horas() {
 
 }
-//Definici�n de operadores de la clase horas
+//Definición de operadores de la clase horas
 Horas Horas::operator + (Horas &h){
 	return Horas(h.getHoras() + getHoras(), h.getMinutos() + getMinutos(), h.getSegundos() + getSegundos());
 }
@@ -59,22 +59,21 @@ Horas Horas::operator - (Horas&h) {
 	return Horas(getHoras() - h.getHoras(), getMinutos() - h.getMinutos(), getSegundos() - h.getSegundos());
 }
 
-bool Horas::operator < (Horas &h) {
-
-	if (getHoras() >= h.getHoras()) return false;
-	else if (getMinutos() >= h.getMinutos()) return false;
-	else if (getSegundos() >= h.getSegundos()) return false;
-	else
-		return true;
+bool Horas::operator < (Horas const &h) {
+	int local, otro;
+	local = horas * 3600 + minutos * 60 + segundos;
+	otro = h._horas * 3600 + h._minutos * 60 + h._segundos;
+	return local <= otro;
 }
-
 ostream& operator << (ostream & out, Horas &h){
 	
 	out << setfill('0') << setw(2) <<h.getHoras() << ":" << setfill('0') << setw(2) << h.getMinutos() << ":" << setfill('0') << setw(2) << h.getSegundos();
 	return out;
 }
-istream& operator >> (istream & in, Horas &h) {
-	in >> h.horas >> h.minutos >> h.segundos;
+istream& operator >> (istream & in, Horas& h) {
+	char aux;
+	in >> h.horas >> aux >> h.minutos >> aux >> h.segundos;
+	//. (0 ≤ horas ≤ 23; 0 ≤ minutos,segundos ≤ 59)
+	if (h.getHoras() > 23 || h.getHoras()<0 || h.getMinutos()>59 || h.getMinutos()<0 || h.getSegundos()>59 || h.getSegundos() < 0) throw std::invalid_argument("Hora mal introducida");
 	return in;
-
 }

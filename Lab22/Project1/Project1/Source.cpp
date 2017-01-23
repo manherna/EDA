@@ -1,4 +1,4 @@
-// Grupo XYZ, Fulano y Mengano
+// Grupo 14, Manuel Hernández
 // Comentario general sobre la solucio´n,
 // explicando co´mo se resuelve el problema
 #include <iostream>
@@ -18,7 +18,17 @@ using namespace std;
 // funcio´n que resuelve el problema
 // comentario sobre el coste, O(f(N))
 void resolver(SinglyLinkedList <Horas> &datos, int aeliminar) {
-
+	if (aeliminar >= datos.size()) {
+		int aux = datos.size();
+		for (int i = 0; i < aux; i++) {
+			datos.pop_front();
+		}
+	}
+	else {
+		for (int i = 0; i < aeliminar; i++) {
+			datos.eliminaMayor();
+		}
+	}
 
 }
 
@@ -37,8 +47,9 @@ bool resuelveCaso() {
 		cin >> aux;
 		datos.push_front(aux);
 	}
-	 resolver(datos, aux2);
-
+	resolver(datos, aux2);
+	datos.print_list();
+	 cout << '\n';
 	// escribir sol
 
 
@@ -62,7 +73,7 @@ int main() {
 	// Para restablecer entrada. Comentar para acepta el reto
 #ifndef DOMJUDGE // para dejar todo como estaba al principio
 	std::cin.rdbuf(cinbuf);
-	//system("PAUSE");
+	system("PAUSE");
 #endif
 
 	return 0;

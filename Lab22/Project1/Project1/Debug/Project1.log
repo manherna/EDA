@@ -1,2 +1,5 @@
-﻿  Project1.vcxproj -> D:\Carrera\EDA No Final\Lab22\Project1\Debug\Project1.exe
-  Project1.vcxproj -> D:\Carrera\EDA No Final\Lab22\Project1\Debug\Project1.pdb (Partial PDB)
+﻿  Source.cpp
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\singlylinkedlist.h(91): error C2065: 'aux': identificador no declarado
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\singlylinkedlist.h(86): note: durante la compilación de la función miembro de plantilla de clase 'void SinglyLinkedList<Horas>::eliminaMayor(void)'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(29): note: vea la referencia a la creación de instancias de plantilla de función 'void SinglyLinkedList<Horas>::eliminaMayor(void)' que se está compilando
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(21): note: vea la referencia a la creación de instancias de plantilla de clase 'SinglyLinkedList<Horas>' que se está compilando
