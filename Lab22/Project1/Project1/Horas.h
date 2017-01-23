@@ -18,8 +18,8 @@ public:
 	friend ostream& operator << (ostream & out, Horas &h);
 	friend istream& operator >> (istream & in, Horas &h);
 	Horas operator + (Horas &h);
-	Horas operator - (Horas&h);
-	bool operator < (Horas&h);
+	Horas operator - (Horas &h);
+	bool operator < (Horas const &h);
 
 private:
 	int horas, minutos, segundos;
@@ -52,7 +52,7 @@ Horas::~Horas() {
 Horas Horas::operator + (Horas &h){
 	return Horas(h.getHoras() + getHoras(), h.getMinutos() + getMinutos(), h.getSegundos() + getSegundos());
 }
-Horas Horas::operator - (Horas&h) {
+Horas Horas::operator - (Horas &h) {
 	int s = 0;
 	int m = 0; 
 	int hor = 0;
@@ -62,7 +62,7 @@ Horas Horas::operator - (Horas&h) {
 bool Horas::operator < (Horas const &h) {
 	int local, otro;
 	local = horas * 3600 + minutos * 60 + segundos;
-	otro = h._horas * 3600 + h._minutos * 60 + h._segundos;
+	otro = h.getHoras() * 3600 + h..getMinutos() * 60 + h.getSegundos();
 	return local <= otro;
 }
 ostream& operator << (ostream & out, Horas &h){

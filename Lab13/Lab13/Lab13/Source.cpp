@@ -27,25 +27,16 @@ bool resolver(vector<int> const & datos, size_t ini, size_t fin, int & suma) {
 		int siz, sder;
 		bool ordiz = resolver(datos, ini, m, siz);
 		bool order = resolver(datos, m + 1, fin, sder);
+		suma = siz+sder;
 		return (ordiz && order && siz < sder);
 	}
 
 }
-bool resolver(int filas, int columnas) {
-	bool ordenado = true;
-	for (int i = 0; i < filas; i++) {
-		vector<int> aux = vector<int>();
-		for (int j = 0; j < columnas; j++) {
-			int auxx;
-			cin >> auxx;
-			aux.push_back(auxx);
-		}
-		size_t ini = 0;
-		size_t fin = aux.size() - 1;
-		int suma = 0;
-		ordenado = resolver(aux, ini, fin, suma);
-	}
-	return ordenado;
+bool resolver(vector<int> datos) {
+	size_t ini = 0;
+	size_t fin = datos.size() - 1;
+	int suma;
+	return resolver(datos, ini, fin, suma);
 }
 
 
@@ -59,8 +50,18 @@ bool resuelveCaso() {
 
 	if (!std::cin)
 		return false;
+	bool sol = true;
+	for (int i = 0; i < aux1; i++) {
+		vector<int> aux = vector<int>();
+		for (int j = 0; j < aux2; j++) {
+			int auxx;
+			cin >> auxx;
+			aux.push_back(auxx);
+		}
+		if (!resolver(aux) && sol == true)
+			sol = false;
+	}
 
-	bool sol = resolver(aux1, aux2);
 	if (sol)cout << "SI\n";
 	else cout << "NO\n";
 	// escribir sol

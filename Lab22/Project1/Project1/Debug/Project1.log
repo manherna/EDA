@@ -1,5 +1,82 @@
 ﻿  Source.cpp
-c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\singlylinkedlist.h(91): error C2065: 'aux': identificador no declarado
-  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\singlylinkedlist.h(86): note: durante la compilación de la función miembro de plantilla de clase 'void SinglyLinkedList<Horas>::eliminaMayor(void)'
-  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(29): note: vea la referencia a la creación de instancias de plantilla de función 'void SinglyLinkedList<Horas>::eliminaMayor(void)' que se está compilando
-  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(21): note: vea la referencia a la creación de instancias de plantilla de clase 'SinglyLinkedList<Horas>' que se está compilando
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(65): error C2662: 'int Horas::getHoras(void)': no se puede convertir el puntero 'this' de 'const Horas' a 'Horas &'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(65): note: Se pierden calificadores en la conversión
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(65): error C2059: error de sintaxis: '.'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(66): error C2039: 'local': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(66): error C2039: 'otro': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C2143: error de sintaxis: falta ';' delante de '&'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C2039: 'ostream': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C2039: 'out': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C2039: 'h': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C2275: 'Horas': uso no válido de este tipo como expresión
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C2473: 'operator <<': parece una definición de función, pero no hay ninguna lista de parámetros.
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C2365: 'operator <<': nueva definición; la definición anterior era 'función'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(18): note: vea la declaración de 'operator <<'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(68): error C2448: '<<': el inicializador de estilo de función parece ser una definición de función
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C2143: error de sintaxis: falta ';' delante de '&'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C2039: 'istream': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C2039: 'in': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C2039: 'h': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C2275: 'Horas': uso no válido de este tipo como expresión
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C2473: 'operator >>': parece una definición de función, pero no hay ninguna lista de parámetros.
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C2365: 'operator >>': nueva definición; la definición anterior era 'función'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(19): note: vea la declaración de 'operator >>'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(73): error C2448: '>>': el inicializador de estilo de función parece ser una definición de función
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(20): error C2039: 'datos': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(20): error C2275: 'SinglyLinkedList<Horas>': uso no válido de este tipo como expresión
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(20): note: vea la declaración de 'SinglyLinkedList<Horas>'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(20): error C2062: tipo 'int' inesperado
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(20): error C2143: error de sintaxis: falta ';' delante de '{'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(20): error C2447: '{': falta el encabezado de función (¿lista formal de estilo anterior?)
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(39): error C2039: 'aux1': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(39): error C2039: 'aux2': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(40): error C2039: 'cin': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(40): error C2039: 'aux1': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(41): error C2039: 'cin': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(41): error C2039: 'aux2': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(42): error C2039: '!': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(44): error C2146: error de sintaxis: falta ';' delante del identificador 'datos'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(44): error C2275: 'SinglyLinkedList<Horas>': uso no válido de este tipo como expresión
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(20): note: vea la declaración de 'SinglyLinkedList<Horas>'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(44): error C2039: 'datos': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(45): error C2146: error de sintaxis: falta ';' delante del identificador 'aux'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(45): error C2275: 'Horas': uso no válido de este tipo como expresión
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(45): error C2039: 'aux': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(46): error C2039: 'i': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(46): error C2039: 'aux1': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(47): error C2039: 'cin': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(47): error C2039: 'aux': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(48): error C2039: 'datos': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(48): error C2039: 'push_front': no es un miembro de 'Horas'
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\horas.h(5): note: vea la declaración de 'Horas'
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(48): error C2065: 'aux': identificador no declarado
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(50): error C2065: 'datos': identificador no declarado
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(50): error C3861: 'resolver': no se encontró el identificador
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(51): error C2065: 'datos': identificador no declarado
+c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(51): error C2228: el operando izquierdo de '.print_list' debe tener class/struct/union
+  c:\users\dell e4310\documents\carrera\eda\lab22\project1\project1\source.cpp(51): note: el tipo es 'unknown-type'

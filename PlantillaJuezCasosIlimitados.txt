@@ -1,4 +1,4 @@
-// Grupo XYZ, Fulano y Mengano
+// Grupo 14, Manuel Hernández
 // Comentario general sobre la solucio´n,
 // explicando co´mo se resuelve el problema
 #include <iostream>

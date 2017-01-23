@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\dell e4310\documents\carrera\eda\lab26\source.cpp(66): warning C4227: se ha utilizado un anacronismo: se omiten los calificadores de la referencia
+c:\users\dell e4310\documents\carrera\eda\lab26\source.cpp(75): warning C4018: '<': no coinciden signed/unsigned
+  Lab26.vcxproj -> C:\Users\DELL E4310\Documents\Carrera\EDA\Lab26\Debug\Lab26.exe
+  Lab26.vcxproj -> C:\Users\DELL E4310\Documents\Carrera\EDA\Lab26\Debug\Lab26.pdb (Full PDB)
