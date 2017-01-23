@@ -14,16 +14,16 @@
 
 // función que resuelve el problema
 // comentario sobre el coste, O(f(N))
-Horas  resolver(vector<Horas>  const &datos) {
+/*Horas  resolver(vector<Horas>  const &datos) {
 	Horas  kek;
 
 
 	return kek;
-}
+}*/
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuracio´n, y escribiendo la respuesta
-bool resuelveCaso() {
+bool resuelveCaso() {/*
 	// leer los datos de la entrada
 	int aux1, aux2;
 	cin >> aux1;
@@ -39,7 +39,12 @@ bool resuelveCaso() {
 	// escribir sol
 
 	return true;
+	*/
 
+	Horas heh = Horas(15, 35, 00);
+	Horas hoh = Horas(04, 45, 00);
+	cout << heh - hoh << "  ";
+	return false;
 }
 
 int main() {
@@ -58,7 +63,7 @@ int main() {
 	// Para restablecer entrada. Comentar para acepta el reto
 #ifndef DOMJUDGE // para dejar todo como estaba al principio
 	std::cin.rdbuf(cinbuf);
-	//system("PAUSE");
+	system("PAUSE");
 #endif
 
 	return 0;

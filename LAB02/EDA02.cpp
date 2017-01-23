@@ -21,7 +21,6 @@ string resolver(vector<int> const &nums, unsigned int p) {
 	int maxmenores = nums[0];
 	bool ordenado = true;
 	if (p < nums.size() - 1) {
-
 		int menmayores = nums[p + 1];
 		for (unsigned int i = 1; i <= p; i++) {
 			if (nums[i] > maxmenores)maxmenores = nums[i];
@@ -63,7 +62,7 @@ int main() {
 #ifndef DOMJUDGE
 	std::ifstream in("casos.txt");
 	auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
-#endif 
+#endif
 
 
 	int numCasos;
