@@ -1,0 +1,11 @@
+4 0 100
+0 
+16 Esteban Garcia
+35 Rodrigo Rodriguez
+100 Ana Perez
+2 25 40
+23 Gonzalo Perez
+50 Mercedes Estebez
+1 35 50
+30 Daniel Gonzalez
+0

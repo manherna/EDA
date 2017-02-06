@@ -1,6 +1,12 @@
 6 3
 a 20 b 30 c 12 d 45 e 22 f 40
 d a e
-8 2
+8 3
 bic 2 ccs 10 eme 2 llm 4 ooh 5 rrr 2 sss 5 zzz 6
 llm eme fff
+8 1
+bic 2 ccs 10 eme 2 zzz 4 ooh 5 rrr 2 sss 5 zzz 6
+zzz
+5 2
+bic 2 ccs 0 cct 0 llm 4 ooh 5 
+ccs zzz
