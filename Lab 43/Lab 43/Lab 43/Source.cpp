@@ -31,6 +31,7 @@ int resolver(Arbin <int> const &nodo, int &numNodos, bool &ok) {
 	if (nodo.esVacio())return 0;
 	else {
 		if (nodo.hijoIz().esVacio() && nodo.hijoDr().esVacio()) {
+			ok = true;
 			numNodos++;
 			return nodo.raiz();
 		}
@@ -38,12 +39,13 @@ int resolver(Arbin <int> const &nodo, int &numNodos, bool &ok) {
 			int a, b;
 			int nder = 0;
 			int niz = 0;
-			a = resolver(nodo.hijoIz(), niz, ok);
-			b = resolver(nodo.hijoDr(), nder, ok);
+			bool iz, der;
+			a = resolver(nodo.hijoIz(), niz, iz);
+			b = resolver(nodo.hijoDr(), nder, der);
 			numNodos = niz + nder;
 			numNodos++;
 			int suma = (a + b + nodo.raiz());
-			if (ok)ok = (suma >= numNodos);
+			if (ok)ok = iz && der && (suma >= numNodos);
 			return suma;
 		}
 	}
