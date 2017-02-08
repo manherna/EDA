@@ -13,49 +13,53 @@
 #include <string>
 using namespace std;
 
-// funcio´n que resuelve el problema
-// comentario sobre el coste, O(f(N))
+// El coste de esta función es de O(n^2)
 int resolver(list<string> & datos, list<string>const &orden, int coste) {
 	int solucion, ordenados;
 	stack<string> pila;
 	solucion = 0;
 	ordenados = 0;
+	unsigned int vueltas = 0;
+	//Iterador por la lista ya ordenada
 	list<string>::const_iterator itor = orden.begin();
-	while (ordenados != orden.size()) {
-		list<string>::const_iterator itdat = datos.begin();
-		list<string>::const_iterator aux;
+	//Iterador por la lista a ordenar
+	list<string>::const_iterator itdat;
+	//Iterador auxiliar 
+	list<string>::const_iterator aux;
+	while (ordenados != orden.size() && vueltas < orden.size()) {
+		itdat = datos.begin();
+		
+		//String auxiliar para sacar el contenido de la pila
 		string cuerda;
 		while (itdat != datos.end()) {
 			//Comprobamos si el primero de la lista es el siguiente.
-			if (*itdat != *itor) {
-				//Si no lo es:
-				//Miramos si la cabeza de pila es la siguiente, si es así lo pasamos y seguimos mirando en la pila
-				if(!pila.empty())cuerda = pila.top();
-				while (cuerda == *itor) {
-					itor++;
-					ordenados++;
-					pila.pop();
-					if (!pila.empty())cuerda = pila.top();
-					else cuerda = "";
-				}
-				pila.push(*itdat);
-				solucion += coste;
-			}
-			else {
+			if (*itdat == *itor) {
+				ordenados++; 
 				itor++;
-				ordenados++;
 			}
-			//Eliminamos de todas formas el elemento, ya que: o se ha metido en la pila, o ha pasado al ferry
+			//si no, lo añadimos a la lista
+			else {
+				solucion += coste;
+				pila.push(*itdat);
+			}
+			//Pasamos al elemento siguiente, eliminando el anterior
 			aux = itdat;
 			itdat++;
-			aux = datos.erase(aux);
+			aux = datos.erase(aux);	
 		}
+		//Comprobamos si el ultimo de la pila es el coche a introducir siguiente, si es asi lo metemos.
+		while (!pila.empty() && pila.top() == *itor) {
+		ordenados++;
+		itor++;
+		pila.pop();
+	}
 		//Volcamos la pila de nuevo a la lista
 		while (!pila.empty()) {
 			cuerda = pila.top();
 			datos.push_front(cuerda);
 			pila.pop();
 		}
+		vueltas++;
 	}
 	return solucion;
 }
@@ -81,7 +85,6 @@ bool resuelveCaso() {
 	for (int i = 0; i < ncoches; i++) {
 		cin >> aux;
 		datos.push_front(aux);
-
 	}
 	int sol = resolver(datos, orden, coste);
 	cout << sol << '\n';

@@ -1,4 +1,4 @@
-// Grupo XYZ, Fulano y Mengano
+// Grupo 14, Manuel Hernández
 // Comentario general sobre la solucio´n,
 // explicando co´mo se resuelve el problema
 #include <iostream>
@@ -8,8 +8,10 @@
 #include <assert.h>
 #include <stdio.h>
 #include <algorithm>
+#include <string>
 
 
+using namespace std;
 
 // funcio´n que resuelve el problema
 // comentario sobre el coste, O(f(N))
