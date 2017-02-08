@@ -1,3 +1,7 @@
+// Grupo 14, Manuel Hernández
+// Para resolver el problema tendremos que mirar 1 por 1 cada nodo, viendo si este tiene hijos o no. Si es asi
+// calcularemos la suma de éstos y comprobaremos si cumple la propiedad.
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -17,8 +21,7 @@ Arbin<T> leerArbol(T const&	vacio) {
 	Arbin<T>	a2 = leerArbol(vacio);
 	return Arbin<T>(a1, raiz, a2);
 }
-// funcio´n que resuelve el problema
-// comentario sobre el coste, O(f(N))
+// El coste de esta función es de O(N), ya que hay que mirar todos los elementos para saber si se cumple la propiedad.
 struct solucion {
 	bool ok;
 	int sumaNodos;
@@ -32,33 +35,31 @@ int resolver(Arbin <int> const &nodo, int &numNodos, bool &ok) {
 			return nodo.raiz();
 		}
 		else {
-			numNodos++;
 			int a, b;
-			a = resolver(nodo.hijoIz(), numNodos, ok);
-			b = resolver(nodo.hijoDr(), numNodos, ok);
+			int nder = 0;
+			int niz = 0;
+			a = resolver(nodo.hijoIz(), niz, ok);
+			b = resolver(nodo.hijoDr(), nder, ok);
+			numNodos = niz + nder;
+			numNodos++;
 			int suma = (a + b + nodo.raiz());
-			if (ok)ok = (suma>= numNodos);
+			if (ok)ok = (suma >= numNodos);
 			return suma;
 		}
 	}
 }
 solucion resolver(Arbin <int> const &datos) {
 	solucion a;
-	if (datos.esVacio()) {	
-		a.ok = false;
-		a.numNodos = 0;
-		a.sumaNodos = 0;
-		return a;
-	}
-	else {
+	//Caso base arbol vacío.
 		bool ok = true;
 		int numNodos = 0;
-		int suma = 0;
-		a.sumaNodos = (datos, numNodos, ok);
+		a.sumaNodos = resolver(datos, numNodos, ok);
 		a.numNodos = numNodos;
-		a.ok = ok;
+		//Caso base numnodos = 1
+		if(numNodos != 1)a.ok = ok;
+		else a.ok = a.sumaNodos >= a.numNodos;
 		return a;
-	}
+	
 
 
 }
